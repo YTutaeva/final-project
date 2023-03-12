@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yuliatutaeva/Documents/Учеба/FinalProject/final-project/final-project.csproj",
+      "projectUniqueName": "/Users/yuliatutaeva/Documents/Учеба/FinalProject/Final_Task/final-project.csproj",
       "projectName": "final-project",
-      "projectPath": "/Users/yuliatutaeva/Documents/Учеба/FinalProject/final-project/final-project.csproj",
+      "projectPath": "/Users/yuliatutaeva/Documents/Учеба/FinalProject/Final_Task/final-project.csproj",
       "packagesPath": "/Users/yuliatutaeva/.nuget/packages/",
-      "outputPath": "/Users/yuliatutaeva/Documents/Учеба/FinalProject/final-project/obj/",
+      "outputPath": "/Users/yuliatutaeva/Documents/Учеба/FinalProject/Final_Task/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yuliatutaeva/.nuget/NuGet/NuGet.Config"
