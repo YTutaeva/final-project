@@ -15,16 +15,18 @@ void PrintArray(string[] StringArray)
 
 string[] HandGenerate()
 {
-    Console.WriteLine("Введите размерность массива.");
+    Console.WriteLine("Please enter the array size: ");
     string[] StringArray = new string[int.Parse(Console.ReadLine())];
     for (int i = 0; i < StringArray.Length; i++) 
     {
-        Console.WriteLine(@"Введите значение № {0}",i+1);
+        Console.WriteLine(@"Enter element № {0}",i+1);
         StringArray[i] = Console.ReadLine();
     }
-    Console.WriteLine("Массив сгенерирован.");
-    PrintArray(StringArray);
+    Console.WriteLine();
+    Console.WriteLine("HERE IS YOUR ARRAY: ");
+    Console.Write(String.Join(", ", StringArray));
     return StringArray;
+    
 }
 
 void RecreateArray(string [] StringArray)
@@ -45,11 +47,11 @@ void RecreateArray(string [] StringArray)
             j++; 
             }
     }
+    Console.WriteLine();
     Console.WriteLine("--------------");
-    Console.WriteLine("Новый массив.");
-    PrintArray(NewArray);
+    Console.WriteLine("NEW ARRAY");
+    Console.Write(String.Join(", ", NewArray));
 }
-
 
 RecreateArray(HandGenerate());
 Console.ReadKey();
