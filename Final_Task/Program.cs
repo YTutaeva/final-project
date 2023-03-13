@@ -12,28 +12,7 @@ void PrintArray(string[] StringArray)
         Console.WriteLine(StringArray[i]);
     }
 }
-string[] AutoGenerateArray()
-{
-    Random Rand = new Random();
-    Thread.Sleep(100);
-    Random Rand2 = new Random();
-    Thread.Sleep(100);
-    Random Rand3 = new Random();
-    string[] StringArray = new string[Rand.Next(5, 100)];
-    string BuffPhrase = "";
-    for (int i = 0; i < StringArray.Length; i++)
-    {
-        int RandCharCoint = Rand2.Next(1, 10);
-        for (int j = 0; j < RandCharCoint; j++)
-        {
-            BuffPhrase += (char)Rand3.Next(0x0410, 0x44F);
-        }
-        StringArray[i] = BuffPhrase;
-        BuffPhrase = "";
-    }
-    PrintArray(StringArray);
-    return StringArray;
-}
+
 string[] HandGenerate()
 {
     Console.WriteLine("Введите размерность массива.");
@@ -47,20 +26,7 @@ string[] HandGenerate()
     PrintArray(StringArray);
     return StringArray;
 }
-string[] ArrayGeneratingChoice()
-{
-    Console.WriteLine("Выберите способ генерации массива. Для генерации в случайном режиме напишите Y. Для генерации в Ручном режиме нажмите N");
-    Console.WriteLine("Для генерации в случайном режиме напишите Y и нажмите Enter.");
-    Console.WriteLine("Для генерации в Ручном режиме нажмите N и нажмите Enter.");
-    switch (Console.ReadLine())
-    {
-        case "Y":
-            return AutoGenerateArray();
-        case "N":
-            return HandGenerate();
-        default: return AutoGenerateArray();
-    }
-}
+
 void RecreateArray(string [] StringArray)
 {
     int TotalCount = 0;
@@ -85,5 +51,5 @@ void RecreateArray(string [] StringArray)
 }
 
 
-RecreateArray(ArrayGeneratingChoice());
+RecreateArray(HandGenerate());
 Console.ReadKey();
